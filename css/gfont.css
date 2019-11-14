@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+@import url('https://fonts.googleapis.com/css?family=Prata|Vidaloka');
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexming.css');
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+.g_font01{font-family: 'Noto Sans TC', sans-serif;}
+.g_font02{font-family: 'cwTeXYen', sans-serif;}
+.e_font01{font-family: 'Concert One', cursive;}
+.e_font02{font-family: 'Vidaloka', serif;}
+.e_font03{font-family: ‘cwTeXMing’, serif;font-weight: bold;}
+.e_font04{font-family: ‘cwTeXFangSong’, serif;font-weight: bold;}
+.e_font05{font-family: 'Abril Fatface', cursive;font-weight: bold;}
+.t18{font-size:18px;}
+.t23{font-size:23px;}
+.t_w{font-weight: bolder;}
+.t38{font-size:38px;}
+.t48{font-size:48px;}

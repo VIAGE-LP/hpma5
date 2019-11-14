@@ -1,6 +1,6 @@
 (function($){
     $(function(){
-        //初期設定
+        //?????���?
         var class_id = $(":radio[name='class_id']");
         var class_check = $("*[name='class_check']");
         var order_name01 = $('#order_name01');
@@ -297,21 +297,21 @@
                 if(order_er_pref.val() == "" || order_er_customer_addr.val() == "") no_inputs++;
             }
             if($('input[name=order_er_receipt_type]:checked').val() == 2) {
-                　if(order_er_customer_identifier.val() == "") no_inputs++;
+                ??if(order_er_customer_identifier.val() == "") no_inputs++;
             }
             if($('input[name=order_er_receipt_type]:checked').val() == 3) {
-                　if(order_er_love_code.val() == "") no_inputs++;
+                ??if(order_er_love_code.val() == "") no_inputs++;
             }
             if(!$(":radio[name='class_id']:checked").val()) no_inputs++;
            
             if (no_inputs != 0) {
-                $('#required-count').html("提醒您。   <br/>尚有<span> " +  no_inputs + "</span> 項未填寫");
+                $('#required-count').html("??????��??   <br/>�????<span> " +  no_inputs + "</span> ?????填寫");
                 $('#required-count').css("background", "rgba(255, 0, 0, 0.62)");
                 $('#required-count').css("font-size", "15px");
                 $("#css3button1").css("background-color", "gray");
                 $("#css3button1").attr('disabled', 'disabled');
             } else {
-                $('#required-count').html("辛苦囉!  訂單已經填寫完成");
+                $('#required-count').html("�??????!  �???已�??��寫�????");
                 $('#required-count').css("background", "rgba(50, 205, 50, 0.64)");
                 $('#required-count').css("font-size", "15px");
                 $('#css3button1').css("background-color", "#65b714");
