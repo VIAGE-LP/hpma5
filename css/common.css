@@ -1,0 +1,763 @@
+@charset "utf-8";
+
+/************************************************
+ 共通設定
+************************************************ */
+body {
+    color: #666;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    //background-color: #f5f5f5;
+    background-color: #ffffff;
+    font-size: 72.5%;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    background: url("../img/bi-shop/bg_header.jpg") repeat-x top #fff;
+}
+
+select {
+    border: solid 1px #ccc;
+}
+/*写真*/
+.picture {
+    /*border: 1px solid #ccc;*/
+}
+
+
+/* ==============================================
+ フレーム
+=============================================== */
+/* 全体を包括 */
+.frame_outer {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+/* コンテンツ */
+#container {
+    margin: 0 auto;
+    padding: 0 0 5% 0;
+    width: 89%;
+    //background: #fff;
+    text-align: left;
+}
+
+
+/* ==============================================
+ カラム指定
+=============================================== */
+/* ヘッダーとフッターの上下
+[注意]ブロック移動時はbloc.css内で調整が必要 */
+#topcolumn ,
+#bottomcolumn ,
+#footerbottomcolumn {
+    margin: 0 auto;
+    width: 950px;
+    background: #fff;
+    text-align: left;
+}
+
+/* 中央カラム */
+.main_column {
+}
+
+/* サイドカラム */
+#leftcolumn {
+    float: left;
+    width: 28%;
+}
+#rightcolumn {
+    float: right;
+    width: 280px;
+    margin-top:10px;
+}
+
+/* 1カラム設定 */
+#one_maincolumn {
+    margin: 0 auto;
+    width: 80%;
+}
+@media screen and (min-width:481px){
+    #two_maincolumn_left {
+        width: 680px;
+    }
+}
+
+/* 2カラム設定 (メイン部が左) */
+#two_maincolumn_left {
+    /*padding-left: 1.5%;*/
+    float: left;
+    overflow:hidden;
+}
+
+/* 2カラム設定 (メイン部が右) */
+#two_maincolumn_right {
+    padding-right: 1.5%;
+    width: 70%;
+    float: right;
+}
+
+/* 3カラム設定 */
+#three_maincolumn {
+    padding-left: 0.5%;
+    width: 59%;
+    float: left;
+}
+
+/* 下層コンテンツ */
+#undercolumn {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+
+/* ==============================================
+ ユーティリティ
+=============================================== */
+/* フロート回り込み解除
+----------------------------------------------- */
+.clearfix:after {
+    display: block;
+    clear: both;
+    height: 0px;
+    line-height: 0px;
+    visibility: hidden;
+    content: ".";
+}
+
+
+/* リンク指定
+----------------------------------------------- */
+a:link ,
+a:visited {
+    color: #F462A7;
+    text-decoration: none;
+}
+a:link:hover ,
+a[href]:hover {
+    color: #f60;
+    text-decoration: underline;
+}
+
+
+/* フォント
+----------------------------------------------- */
+h1,h2,h3,h4,h5 {
+    font-size: 100%;
+    line-height: 150%;
+}
+.price {
+    color: #a00;
+}
+.sale_price {
+    color: #a00;
+}
+.normal_price {
+    color: #555;
+    font-size: 90%;
+}
+.normal_price .price{text-decoration:line-through;}
+.point {
+    color: #f00;
+    font-weight: bold;
+}
+.user_name {
+    font-weight: bold;
+}
+.recommend_level {
+    color: #ecbd00;
+}
+
+.attention {
+    color: #f00;
+}
+.attentionSt {
+    color: #f00;
+    font-weight: bold;
+}
+.st {
+    font-weight: bold;
+}
+.mini {
+    font-size: 90%;
+}
+
+
+/* 行揃え
+----------------------------------------------- */
+.alignC {
+    text-align: center;
+}
+.alignR {
+    text-align: right;
+}
+.alignL {
+    text-align: left;
+}
+.pricetd em {
+    font-weight: bold;
+}
+
+
+/* フォーム
+----------------------------------------------- */
+input[type='text'] ,
+input[type='password'] ,
+.select {
+    border: solid 1px #ccc;
+    padding: 2px;
+}
+
+.box40 {
+    width: 40px;
+}
+.box60 {
+    width: 60px;
+}
+.box100 {
+    width: 100px;
+}
+.box120 {
+    width: 120px;
+}
+.box140 {
+    width: 140px;
+}
+.box145 {
+    width: 145px;
+}
+.box150 {
+    width: 150px;
+}
+.box240 {
+    width: 240px;
+}
+.box300 {
+    width: 300px;
+}
+.box320 {
+    width: 320px;
+}
+.box350 {
+    width: 350px;
+}
+.box380 {
+    width: 380px;
+}
+
+/* フォームが縦に重なり合う場合に併用する余白 */
+.top {
+    margin-bottom: 5px;
+}
+
+.ng_top {
+    margin-bottom: 0 !important;
+}
+
+
+/* タイトル
+----------------------------------------------- */
+h2.title {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-bottom: solid 3px #F462A7;
+    color: #F462A7;
+    font-size: 14px;font-weight:bold;
+}
+
+div.ttl {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-bottom: solid 3px #F462A7;
+    color: #F462A7;
+    font-size: 14px;font-weight:bold;
+}
+
+#one_maincolumn .sub_area h3 ,
+#two_maincolumn_right .sub_area h3 ,
+#two_maincolumn_left .sub_area h3 ,
+#three_maincolumn .sub_area h3 ,
+#undercolumn_login .login_area h3 ,
+#undercolumn_shopping h3 ,
+#mypagecolumn h3 ,
+#undercolumn_cart h3 {
+border-bottom:3px #F564A9 solid;padding:2px 0 7px 22px;margin-bottom:10px;background:url(../img/bi-shop/title-icon.jpg) top left no-repeat;color:#ff7fa8;font-weight:bold;
+}
+
+div#undercolumn_login .login_area h4 {
+    padding-left: 15px;
+    background: url("../img/icon/ico_arrow_05.gif") no-repeat left;
+}
+
+
+/* ==============================================
+ ヘッダー
+=============================================== */
+/* レイアウト
+----------------------------------------------- */
+#header_wrap {
+    //border-top: solid 3px #f90;
+    min-height: 80px;
+}
+#header_b {
+    margin: auto;
+    width: 980px;
+}
+#logo_area {
+    padding-left: 10px;
+    float: left;
+    width: 200px;
+    text-align: left;
+}
+#header_b h2 p{color:#fff;text-align:left;}
+#header_utility {
+    float: right;
+    width: 770px;
+    margin-top:15px;
+}
+#headerInternalColumn{height:20px !important;}
+
+#errorHeader {
+    color: #F00;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #FEB;
+    text-align: center;
+    padding: 5px;
+}
+
+/* ロゴ
+----------------------------------------------- */
+#site_description {
+    font-size: 90%;
+}
+#logo_area h1 {
+    width: 378px;
+    height: 33px;
+    margin-top:15px;
+}
+#logo_area h1 span {
+    display: none; /* テキストロゴ非表示 */
+}
+
+
+/* ヘッダーナビ
+----------------------------------------------- */
+div#header_navi {
+    float: right;
+    width: 380px;
+    height: 38px;
+}
+div#header_navi ul li {
+    display: block;
+    float: left;
+}
+div#header_navi ul li.mypage,
+div#header_navi ul li.entry {
+    margin-right: 6px;
+}
+
+
+/* ==============================================
+ フッター
+=============================================== */
+#footer_wrap {
+    margin: 0 auto;
+    /*height: 80px;*/
+    background: #fff;
+}
+#footer_b {
+    margin: auto;
+    padding-top: 20px;
+    /*width: 980px;*/
+    background:url(../img/bi-shop/footer_bg.jpg) #4C4A4B top right repeat-x;
+}
+#pagetop {
+    width: 980px;
+    margin:auto;
+    text-align: right;
+}
+#copyright {
+    width: 740px;
+    float: left;
+    text-align: left;
+    font-size: 97%;
+}
+
+
+/* ==============================================
+ パーツ
+=============================================== */
+/* ボタン
+----------------------------------------------- */
+.btn_area {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn_area li {
+    padding-right: 10px;
+    display: inline;
+}
+
+
+/* 完了メッセージ
+----------------------------------------------- */
+div#complete_area {
+    margin-bottom: 20px;
+}
+div#complete_area .message ,
+div#undercolumn_entry .message {
+    margin-bottom: 20px;
+    line-height: 150%;
+    font-weight: bold;
+    font-size: 120%;
+}
+div#complete_area .shop_information {
+    margin-top: 40px;
+    padding: 20px 0 0 0;
+    border-top: solid 1px #ccc;
+}
+div#complete_area .shop_information .name {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 140%;
+}
+
+
+/* Tipsy
+----------------------------------------------- */
+.tipsy { padding: 5px; font-size: 10px; position: absolute; z-index: 100000; }
+  .tipsy-inner { padding: 5px 8px 4px 8px; background-color: black; color: white; max-width: 200px; text-align: center; }
+  .tipsy-inner { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+  .tipsy-arrow { position: absolute; background: url('../img/ajax/tipsy.gif') no-repeat top left; width: 9px; height: 5px; }
+  .tipsy-n .tipsy-arrow { top: 0; left: 50%; margin-left: -4px; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; }
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; }
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -4px; background-position: bottom left; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; background-position: bottom left; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; background-position: bottom left; }
+  .tipsy-e .tipsy-arrow { top: 50%; margin-top: -4px; right: 0; width: 5px; height: 9px; background-position: top right; }
+  .tipsy-w .tipsy-arrow { top: 50%; margin-top: -4px; left: 0; width: 5px; height: 9px; }
+
+
+
+/* aaa */
+
+#slideshow {
+	margin: 0 auto;
+	width: 682px;
+	height:312px;
+	text-align: left;
+	background:url("../img/bi-shop/banner_bg.png") top left no-repeat;
+}
+#slideshow div {
+	width: 496px;
+	height: 290px;
+	position: relative;
+	float:left;
+}
+#slideshow div div {
+	top: 0;
+	left: 0;
+	position: absolute;
+	margin:10px 0 0 10px;
+}
+
+#slideshow ul {
+	width: 155px;
+	float:right;
+	margin:5px 12px 0 0;
+}
+
+#slideshow ul li {
+	width: 155px;
+	margin:5px 0 0 0;
+	/*display: inline;*/
+}
+
+#slideshow .active {
+	filter:alpha(opacity=100)!important;
+	-moz-opacity: 1!important;
+	opacity: 1!important;
+}
+
+#slideshow #view1,#slideshow #view2,#slideshow #view3{overflow:hidden;}
+
+/* =======================================
+	ClearFixElements
+======================================= */
+#slideshow ul:after {
+	content: ".";
+	height: 0;
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+
+#slideshow ul {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.b-box{margin-bottom:15px;}
+.title1{font-size:18px;border-bottom:3px #F564A9 solid;padding:0 0 10px 22px;margin-bottom:10px;background:url(../img/bi-shop/title-icon.jpg) top left no-repeat;color:#ff7fa8;font-weight:bold;}
+.title2{border-bottom:3px #F564A9 solid;margin-bottom:10px;color:#F564A9;font-weight:bold;}
+.pic{width:300px;float:left;}
+.news{width:350px;float:right;}
+.campaign ul li{float:left;margin:3px;}
+.new ul li{float:left;margin:3px;}
+.diary ul li{float:left;margin:3px;}
+.rank ul li{float:left;margin:3px;}
+.b-box .img{width:150px;float:left;}
+.b-box .txt{width:140px;float:right;}
+
+.css3button {
+    cursor:pointer;
+    float:right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	padding: 3px 10px;margin-top:-7px;
+	background: -moz-linear-gradient(
+		top,
+		#4dafdc 0%,
+		#3597c4);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#4dafdc),
+		to(#3597c4));
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 1px solid #1b77a1;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 3px rgba(0,0,0,0);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 3px rgba(0,0,0,0);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 3px rgba(0,0,0,0);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.1),
+		0px 1px 0px rgba(0,0,0,0.5);
+	color:#fff !important;
+	text-decoration:none !important;
+}
+.css3button:hover {
+    cursor:pointer;
+    float:right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	padding: 3px 10px;margin-top:-7px;
+	background: -moz-linear-gradient(
+		top,
+		#3193bd 0%,
+		#147199);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#3193bd),
+		to(#147199));
+	border: 1px solid #1b77a1;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 3px rgba(0,0,0,0);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 3px rgba(0,0,0,0);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 3px rgba(0,0,0,0);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.1),
+		0px 1px 0px rgba(0,0,0,0.5);
+}
+
+.fb{background:#3c599b;}
+.fb img{margin:1px 10px 0 0;}
+
+.title2 button.css3button{margin-top:19px;}
+
+img{vertical-align:top;}
+.campaign .img{width:120px;float:left;margin:7px;}
+.new .img{width:120px;float:left;margin:7px;}
+.rank .img{width:120px;float:left;margin:7px;}
+.diary .img{width:120px;float:left;margin:7px;}
+.new .img img{width:120px;}
+.rank .img img{width:120px;}
+.diary .img img{width:120px;}
+.side-first{margin-top:10px;}
+    div.tooltip {  
+        width: 575px;height:496px;
+        position: absolute;  
+        left: -9999px;  
+        background:url("../img/bi-shop/what.png");
+        text-indent:-9999px;
+        z-index:200;
+        top:50px;
+    }  
+
+.side_title{
+padding:2px 0 7px 15px;margin-bottom:10px;background:url(../img/bi-shop/side_title.jpg) top left no-repeat;color:#777;font-weight:bold;
+}
+.bloc_outer{margin:10px 0 !important;}
+#pickup_area .item{margin:10px;padding:10px 0;border-bottom:1px #ccc dotted;}
+#pickup_area .item img{width:110px;margin-right:10px;}
+#category_area .bloc_body{background:none !important;}
+.side_column .bloc_body, .main_column .bloc_body{border:none !important;}
+#category_area li.level1 p{background:url("../img/bi-shop/cat_icon.jpg") no-repeat 3px 7px scroll !important;}
+
+#footer_box{width:980px;height:200px;margin:0 auto;}
+#footer_box ul{padding:0;margin:0;list-style-type:none;text-align:left;margin-top:40px;}
+#footer_box .box1{background:url(../img/bi-shop/footer_t1.jpg) top left no-repeat;height:190px;width:210px;float:left;border-right:1px #fff solid;margin-right:20px;}
+#footer_box .box2{background:url(../img/bi-shop/footer_t2.jpg) top left no-repeat;height:190px;width:160px;float:left;border-right:1px #fff solid;margin-right:20px;}
+#footer_box .box3{background:url(../img/bi-shop/footer_t3.jpg) top left no-repeat;height:190px;width:320px;float:left;margin-right:20px;position:relative;}
+#footer_box .box3 .box3_btn{width:70px;position:absolute;top:160px;left:190px;}
+#footer_box table{text-align:left;margin-top:40px;border:none;}
+#footer_box table th{background:none;border:none;padding:3px;font-size:14px;font-weight:bold;color:#fff;}
+#footer_box table td{background:none;border:none;padding:3px;}
+#copyright{text-align:center;background:#000;width:100%;}
+
+.disnon{display:none;}
+#tab li{padding:0;margin:0;cursor:pointer;height:51px;text-indent:-9999px;border:none;}
+#tab li.rank1{background:url("../img/bi-shop/btn_rank1.jpg") bottom left no-repeat;width:149px;}
+#tab li.rank2{background:url("../img/bi-shop/btn_rank2.jpg") bottom left no-repeat;width:156px;}
+#tab li.rank3{background:url("../img/bi-shop/btn_rank3.jpg") bottom left no-repeat;width:146px;}
+#tab li.rank1:hover{background:url("../img/bi-shop/btn_rank1_on.jpg") bottom left no-repeat;width:149px;}
+#tab li.rank2:hover{background:url("../img/bi-shop/btn_rank2_on.jpg") bottom left no-repeat;width:156px;}
+#tab li.rank3:hover{background:url("../img/bi-shop/btn_rank3_on.jpg") bottom left no-repeat;width:146px;}
+#tab li.rank1.select{background:url("../img/bi-shop/btn_rank1_on.jpg") bottom left no-repeat;width:149px;}
+#tab li.rank2.select{background:url("../img/bi-shop/btn_rank2_on.jpg") bottom left no-repeat;width:156px;}
+#tab li.rank3.select{background:url("../img/bi-shop/btn_rank3_on.jpg") bottom left no-repeat;width:146px;}
+.rank span{color:#FF7E00;font-weight:bold;}
+.pricebox{text-align:right;}
+#two_maincolumn_left div#detailphotobloc, #two_maincolumn_right div#detailphotobloc{width:40% !important;}
+#two_maincolumn_left div#detailrightbloc, #two_maincolumn_right div#detailrightbloc{width:60% !important;}
+div.cart_area{background:url(../img/bi-shop/rank1_bg.jpg);border:none !important;}
+#detailrightbloc .normal_price{display:inline;}
+#detailrightbloc .sale_price{display:inline;}
+#detailrightbloc .quantity{float:left;width:120px;}
+#detailrightbloc .cartin{float:right;width:160px;margin-top:5px;}
+ul.status_icon li{margin-bottom:5px;}
+#two_maincolumn_right #recomend_area .bloc_body .productContents, #two_maincolumn_left #recomend_area .bloc_body .productContents, #two_maincolumn_right #whobought_area .whobought_bloc .productContents, #two_maincolumn_left #whobought_area .whobought_bloc .productContents{width:230px !important;}
+
+.modoru .css3button{float:left;}
+.btn_area{text-align:center;}
+.center .css3button{margin:auto;float:none;}
+#cart_area .btn{background:none !important;border-top:1px #ccc dashed;}
+
+.wide1{width:260px;margin:auto;}
+.wide2{width:330px;margin:auto;}
+.wide3{width:180px;margin:auto;}
+.btn_area .left{float:left;}
+.btn_area .right{float:right;}
+
+.login_area .left{width:330px;float:left;}
+.login_area .right{width:330px;float:right;}
+.login_area p{min-height:60px;}
+
+body div#windowcolumn h2{border-top:none;border-bottom:3px #F564A9 solid;padding:2px 0 7px 22px;margin-bottom:10px;background:url(../img/bi-shop/title-icon.jpg) top left no-repeat;color:#ff7fa8;font-weight:bold;}
+body div#windowcolumn{border:none;}
+
+.banner_area img{max-width:680px;}
+
+#what dl dd{margin-bottom:20px;}
+#what dl dt{font-size:16px;font-weight:bold;color:#39a6d9;}
+
+div#mynavi_area div.point_announce{background:#fee !important;border:1px #F564A9 dotted !important;}
+.mynavi_list li{font-size:12px !important;}
+
+div#detailrightbloc .favorite_btn{margin-top:40px !important;}
+div#undercolumn div#undercolumn_cart .point_announce{background:#FFEEEE;border:1px #F564A9 solid;}
+
+.pgnavi li{float:left;margin-right:10px;}
+
+#undercolumn_entry a img:hover{opacity:0.7;}
+
+.icon{
+display:inline-block;
+padding:2px 10px;
+font-size:9px;
+font-weight:bold;
+margin:0 1px 3px 0;
+border-radius: 5px;
+color:#fff;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scale(1, 1.01);
+     -moz-transform-origin: 0 0;
+     -moz-transform: scale(1, 1.01);
+      -ms-transform-origin: 0 0;
+      -ms-transform: scale(1, 1.02); /* IE9だけ1.02 */
+       -o-transform-origin: 0 0;
+       -o-transform: scale(1, 1.01);
+}
+
+.header_menu{width:380px;float:left;}
+.header_menu li{float:left;padding-bottom:5px;border-bottom:5px #ccc solid;margin-right:15px;}
+.header_menu li.m1 a{color:#36C7C4;}
+.header_menu li.m1{border-color:#36C7C4;}
+.header_menu li.m2 a{color:#39A5D6;}
+.header_menu li.m2{border-color:#39A5D6;}
+.header_menu li.m3 a{color:#33DB3D;}
+.header_menu li.m3{border-color:#33DB3D;}
+.header_menu li.m4 a{color:#C62C2A;}
+.header_menu li.m4{border-color:#C62C2A;}
+.header_menu li.m5 a{color:#D8810A;}
+.header_menu li.m5{border-color:#D8810A;}
+
+#social_box{
+  background-color:rgba(255,255,255,0.7);
+  border:1px solid #F564A9;
+  width:335px;
+  padding:10px;
+  text-align:center;
+  position:fixed;
+  bottom:0px;right:0px;
+  list-style-type:none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin:0 10px 10px 0;
+  z-index:100;
+}
+#social_box li{padding:5px 0;width:80px;float:left;}
+
+#twitter-share-button #c{}
+
+
+.offer{background: url(../images/offer_bg.jpg);width: 800px;height: 992px;position: relative;margin: 0 auto;}
+    .offer .btn1{position: absolute;width: 324px;height: 88px;top: 395px;left:436px;}
+    .offer .btn2{position: absolute;width: 324px;height: 88px;top: 622px;left:436px;}
+    .offer .btn3{position: absolute;width: 324px;height: 88px;top: 880px;left:436px;}
+
+/*moblie*/
+@media only screen and (max-width: 768px)  {
+
+    .offer {
+        display: none;
+    }
+
+    .offer_m {
+        display: block;
+    }
+
+    .offer_m img {
+        width: 100%;margin: 0;padding: 0;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+      .offer {
+        display: block;
+    }
+
+    .offer_m {
+        display: none;
+    }
+
+
+}

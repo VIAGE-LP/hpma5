@@ -1,0 +1,216 @@
+// *******************************************
+// 接続先サーバー情報
+// *******************************************
+//const SETTING_ACTION_URL = "http://sazae.littlesoft.jp:8080/ld";
+//const SETTING_ACTION_URL = "http://localhost:8080/ld";
+//const SETTING_ACTION_URL = "https://stgj8.acs-tpkg.com/ld";
+// const SETTING_ACTION_URL = "https://stg.acs-tpkg.com/ld";
+const SETTING_ACTION_URL = "https://asp.acs-tpkg.com/ld";
+
+//*******************************************
+// 利用言語情報
+// - tw : 台湾語
+// - cn : 中国語
+// - en : 英語
+// - hk : 香港語
+//*******************************************
+const SETTING_LANGUAGE = "tw";
+//const SETTING_LANGUAGE = "cn";
+//const SETTING_LANGUAGE = "en";
+//const SETTING_LANGUAGE = "hk";
+
+// *******************************************
+// None-use delivery date
+// The date which couldn't been selected
+// 0: Sunday, 1: Monday 2: Tuesday ... 6: Saturday
+// *******************************************
+// const SETTING_NONEUSE_DATE = "1,2";
+const SETTING_NONEUSE_DATE = "0";
+
+//*******************************************
+// Whether show not selected text or not
+// 0: show, 1: not show
+//*******************************************
+// const SETTING_SHOW_NOTSELECT = "1";
+const SETTING_SHOW_NOTSELECT = "0";
+
+// *******************************************
+// 定期商品インデックス
+//  => 指定した位置にある商品を定期として扱う
+// *******************************************
+const SETTING_REGULAR_ITEM_INDEX = "";
+
+//*******************************************
+//ちょっと待って対象商品インデックス
+//=> 指定した位置にある商品をちょっと待って対象とする
+//*******************************************
+//const SETTING_REGULAR_ITEM_INDEX = "1,2";
+const SETTING_WAIT_ITEM_INDEX = "";
+
+//*******************************************
+//ちょっと待ってページから商品を切り替えた際の設定
+//- changePromotionCode
+//=> 切替後の販促コード
+//- changeProductCode
+//=> 切替後の商品コード
+//- changeProductCycle
+//=> 切替後の商品定期日数
+//*******************************************
+const SETTING_CHANGE_PROMOTION_CODE = "";
+const SETTING_CHANGE_PRODUCT_CODE = "";
+const SETTING_CHANGE_PRODUCT_CYCLE = "";
+
+// *******************************************
+// 商品プルダウンに表示される商品を設定する
+// - code
+//  => 対象商品の商品コード
+// - name
+//  => 対象商品の名称
+// - isRegular
+//  => 定期かどうか 0:都度 / 1:定期
+// - cycle
+//  => 定期配送サイクル
+// *******************************************
+const SETTING_PRODUCT_LIST = [
+  {
+    code: "HAPPYEAT01",
+    name: "生薑酵母膠囊 定期優惠方案",
+    isRegular: "1",
+    cycle: "30",
+    defaultVal: "30",
+    visible: 1
+  },
+  {
+    code: "HAPPYEAT02",
+    name: "生薑酵母膠囊 單品訂購方案",
+    isRegular: "0",
+    cycle: "",
+    defaultVal: "",
+    visible: 1
+  },
+  {
+    code: "HAPPYEAT03",
+    name: "生薑酵母膠囊 三入組訂購方案",
+    isRegular: "0",
+    cycle: "",
+    defaultVal: "",
+    visible: 1
+  }
+];
+
+// *******************************************
+// ちょっと待ってページの選択肢IDの設定
+// - wait_action1(商品を変更しない場合のID)
+//  => SETTING_WAIT_ACTION1がIDとなる
+// - wait_action2(商品を変更する場合のID)
+//  => SETTING_WAIT_ACTION2がIDとなる
+// *******************************************
+const SETTING_WAIT_ACTION1 = "wait_action1";
+const SETTING_WAIT_ACTION2 = "wait_action2";
+
+// *******************************************
+// LPで使用する環境の設定
+// - SETTING_PROMOTION_CODE
+//  => 使用する販促コードを指定する
+// - SETTING_USER_ID
+//  => 使用するユーザーIDを指定する
+// - SETTING_ID
+//  => 使用するACCOUNT_IDを指定する
+// - SETTING_QUANTITY
+//  => 数量
+// - SETTING_CONVERT_TYPE
+//  => 通貨レート換算先の通貨を指定する
+// - SETTING_ACCURACY_NUMBER
+//  => 変換先通貨の小数点桁数を指定する
+//*******************************************
+const SETTING_PROMOTION_CODE = "hpma5";
+const SETTING_USER_ID = "nextage_lp";
+const SETTING_ID = "2018050001";
+const SETTING_QUANTITY = "1";
+const SETTING_CONVERT_TYPE = "TWD";
+const SETTING_ACCURACY_NUMBER = "1";
+
+// ******************************************
+// 初期値の設定
+// - SETTING_DEFAULT_PAYMENT_METHOD(支払方法)
+//  => 1 : カード
+//  => 2 : 代金引換
+//  => 3 : 銀聯
+//  => 4 : Alipay
+//  => 5 : コンビニ決済
+//  => 6 : wechat
+// - SETTING_DEFAULT_PRODUCT_CODE(商品)
+//  => 初期値にする商品コード
+// - SETTING_DEFAULT_BIRTH_YEAR(生年月日（年のみ設定）)
+//  => 1980年
+// - SETTING_DEFAULT_SEX(性別)
+//  => 1 : 男性
+//  => 2 : 女性
+// ※設定されていない支払方法や商品を初期値に
+//   設定した場合は、未選択状態で表示します
+// ******************************************
+const SETTING_DEFAULT_PAYMENT_METHOD = "";
+const SETTING_DEFAULT_PRODUCT_CODE = "";
+const SETTING_DEFAULT_BIRTH_YEAR = "1980";
+const SETTING_DEFAULT_SEX = "2";
+
+// ******************************************
+// 必須項目の設定
+// => 0 : 任意 - 必須アイコン無し
+// => 1 : 必須 - 必須アイコン有り
+// ※必須アイコンの表示切替もここで行う
+// ******************************************
+const SETTING_REQUIRED_SHIPPING_DATE = "0"; // 配送日
+const SETTING_REQUIRED_SHIPPING_TIME = "0"; // 配送時間
+const SETTING_REQUIRED_EMAIL = "1"; // メールアドレス
+const SETTING_REQUIRED_SEX = "1"; // 性別
+const SETTING_REQUIRED_BIRTHDAY = "1"; // 生年月日
+const SETTING_REQUIRED_COMPANY_NAME = "0"; // カード会社名
+const SETTING_REQUIRED_COMPANY_COUNTRY = "0"; // カード会社国
+const SETTING_REQUIRED_ZIP = "1"; // 郵便番号
+
+// ******************************************
+// ThankYouページの設定
+// - SETTING_THANKYOU_PAGE
+//  => 購入完了時に表示させるページの指定を行う
+// ※未指定時はSystem設定で指定されたページへと遷移する
+// ******************************************
+SETTING_THANKYOU_PAGE = "";
+
+//******************************************
+//[スマホ版]コンビニ選択時の戻り先方法の設定
+//=> 0 : コンビニ選択ポップアップを閉じ親画面へ戻る
+//=> 1 : コンビニ選択ポップアップの画面で再度LP画面を開く
+//※未指定時はSystem設定で指定されたページへと遷移する
+//******************************************
+const SETTING_CONV_RETURN_PAGE = "1";
+const SETTING_CONV_DEBUG = false;
+
+//******************************************
+//共通ファイル読み込み設定
+//- SETTING_JS_URL
+//=> jsの格納先の設定を行う
+//- SETTING_CSS_URL
+//=> cssの格納先の設定を行う
+//- SETTING_LANG_JSON_URL
+//=> 各言語ファイルの格納先の設定を行う
+//- SETTING_IMAGE_URL
+//=> imagesの格納先の設定を行う
+//- SETTING_HTML_CONV_URL
+//=> ConpConvStore.htmlの格納先の設定を行う
+//- SETTING_JS_CHAT_URL
+//=> WebChatEntryPopUp.jsの格納先の設定を行う
+//- SETTING_CHAT_ICONL
+//=> 使用するChatのimagesファイル(大)の設定を行う
+//- SETTING_CHAT_ICONS
+//=> 使用するChatのimagesファイル(小)の設定を行う
+//******************************************
+const SETTING_DOMAIN_URL = "https://happyshopeat.com";
+const SETTING_JS_URL = SETTING_DOMAIN_URL + "/CommonFiles/js";
+const SETTING_CSS_URL = SETTING_DOMAIN_URL + "/CommonFiles/css";
+const SETTING_LANG_JSON_URL = SETTING_DOMAIN_URL + "/CommonFiles/language";
+const SETTING_IMAGE_URL = SETTING_DOMAIN_URL + "/CommonFiles/images";
+const SETTING_HTML_CONV_URL = "/CommonFiles";
+const SETTING_JS_CHAT_URL = "/CommonFiles";
+const SETTING_CHAT_ICONL = "/bnr_chat.png";
+const SETTING_CHAT_ICONS = "/sp_640x200.png";
